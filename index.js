@@ -11,4 +11,14 @@ function printGrid() {
   }
 }
 
-printGrid();
+function main() {
+  printGrid();
+  const grids = document.querySelectorAll("#grid");
+  grids.forEach(function (grid) {
+    grid.addEventListener("mouseover", function (e) {
+      e.target.classList.toggle("active");
+    });
+  });
+}
+
+main();
