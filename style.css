@@ -1,4 +1,4 @@
-.container {
+.grid {
   background-color: white;
   display: flex;
   padding: 0px 415px;
@@ -8,13 +8,13 @@
   height: 100vh;
 }
 
-.grid {
+.grid__pixel {
   background-color: lightgray;
   width: 5vh;
   height: 5vh;
   border: 1px solid white;
 }
 
-.active {
+.is-active {
   background-color: black;
 }
