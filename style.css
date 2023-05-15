@@ -4,14 +4,13 @@
   padding: 0px 415px;
   align-content: center;
   justify-content: center;
-  flex-wrap: wrap;
-  height: 100vh;
+  height: 50px;
 }
 
 .grid__pixel {
   background-color: lightgray;
-  width: 5vh;
-  height: 5vh;
+  width: 0.5em;
+  height: 0.5em;
   border: 1px solid white;
 }
 
