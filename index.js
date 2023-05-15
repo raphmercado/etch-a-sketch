@@ -1,7 +1,7 @@
-function printGrid() {
+function printGrid(pixelCount) {
   const grid = document.querySelector(".grid");
-  for (let count = 1; count <= 16; count++) {
-    for (let i = 1; i <= 16; i++) {
+  for (let count = 1; count <= pixelCount; count++) {
+    for (let i = 1; i <= pixelCount; i++) {
       const pixel = document.createElement("div");
       pixel.setAttribute("id", "pixel");
       pixel.className = "grid__pixel";
@@ -11,7 +11,11 @@ function printGrid() {
 }
 
 function main() {
-  printGrid();
+  const btn = document.querySelector(".btn-container__btn");
+  btn.addEventListener("click", function (e) {
+    const pixelCount = prompt("Enter number of pixels: ");
+    printGrid(pixelCount);
+  });
   const pixels = document.querySelectorAll("#pixel");
   pixels.forEach(function (pixel) {
     pixel.addEventListener("mouseover", function (e) {
