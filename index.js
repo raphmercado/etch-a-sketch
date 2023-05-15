@@ -17,8 +17,30 @@ function main() {
   const btn = document.querySelector(".btn-container__btn");
   btn.addEventListener("click", function (e) {
     const gridRowCount = prompt("Enter number of grid rows: ");
-    const gridColumnCount = prompt("Enter number of grid columns: ");
-    printGrid(gridRowCount, gridColumnCount);
+    if (gridRowCount > 100) {
+      alert("Maximum of 100");
+      return;
+    } else if (gridRowCount == 0) {
+      alert("Cannot be 0");
+      return;
+    } else if (gridRowCount < 0) {
+      alert("Cannot be less than 0");
+      return;
+    } else {
+      const gridColumnCount = prompt("Enter number of grid columns: ");
+      if (gridColumnCount > 100) {
+        alert("Maximum of 100");
+        return;
+      } else if (gridColumnCount == 0) {
+        alert("Cannot be 0");
+        return;
+      } else if (gridColumnCount < 0) {
+        alert("Cannot be less than 0");
+        return;
+      } else {
+        printGrid(gridRowCount, gridColumnCount);
+      }
+    }
   });
   const pixels = document.querySelectorAll(".grid");
   pixels.forEach(function (pixel) {
